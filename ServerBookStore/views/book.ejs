@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>book</title>
+  </head>
+  <body>
+      <!-- enctype="multipart/form-data" bắt buộc phải có khi upload file -->
+    <form action="" method="post" enctype="multipart/form-data">
+      <input type="text" name="txtName" placeholder="Enter name of book..." />
+      <br />
+      <select name="selectCate">
+        <% Cates.forEach(function(cate){ %>
+        <option value="<%- cate._id%>">
+            <!-- in ra tên sách -->
+            <%- cate.name%>
+        </option>
+        
+        <% }); %>
+      </select>
+      <br />
+      <input type="file" name="BookImage" />
+      <br />
+      <input type="text" name="txtFile" placeholder="Enter url of book..." />
+      <br />
+      <input type="submit" name="btnAdd" value="AddBook" />
+    </form>
+  </body>
+</html>

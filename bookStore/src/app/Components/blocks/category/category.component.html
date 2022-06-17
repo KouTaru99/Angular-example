@@ -1,0 +1,20 @@
+<div class="card" style="width: 18rem">
+  <div class="card-header"><b>Category</b></div>
+  <ul class="list-group" *ngFor="let cate of arrCate">
+
+    <li
+      class="list-group-item d-flex justify-content-between align-items-center"
+      
+    >
+      <a
+      style="text-decoration: none"
+      routerLink="/{{ cate.name }}"
+      >
+        {{cate.name}}
+      </a>
+      <span class="badge bg-primary rounded-pill">{{
+        cate.Books_id.length
+      }}</span>
+    </li>
+  </ul>
+</div>

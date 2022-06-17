@@ -1,0 +1,8 @@
+<h1> {{getMessage()}} </h1>
+
+
+
+<input type="text" placeholder="Enter city name" [(ngModel)] = "cityName">
+<button type="submit" (click) = "changeCity()">Enter</button>
+
+<p>{{arrTemp.main | json}}</p>
